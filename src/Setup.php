@@ -14,10 +14,9 @@ class Setup{
   public function echo_status_page(){
     Heart::beat('VIEW_STATUS_PAGE', "A user viewed the heartbeat status page.", true);
     $ll_heartbeat_log = get_option('ll_heartbeat_log');
-
-    $loader = new Twig_Loader_Filesystem(realpath(__DIR__ . '/templates'));
-    $twig = new Twig_Environment($loader, array());
-
+    $arguments = array( 'envoyer_heartbeat_log' => $ll_heartbeat_log);
+    $loader = new \Twig_Loader_Filesystem(dirname(__FILE__) . '/../templates');
+    $twig = new \Twig_Environment($loader, array());
     echo $twig->render('heartbeat_status_page.html', $arguments);
   }
 }
