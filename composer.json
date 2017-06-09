@@ -1,0 +1,21 @@
+{
+    "name": "level-level/heartbeat",
+    "description": "Registers events and triggers remotes if indicated",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Level Level",
+            "email": "info@level-level.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^1.2"
+    },
+    "autoload": {
+        "psr-4":{
+            "LL\\Heartbeat\\": "src/"
+        },
+        "files": ["init.php"]
+    }
+}

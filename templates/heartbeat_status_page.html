@@ -1,0 +1,12 @@
+<h1>Heartbeat status</h1>
+{% for hb_hook in envoyer_heartbeat_log %}
+  <div class='hb_hook'>
+    <h2>{{hb_hook.name}}</h2>
+    <p>{{hb_hook.description}}</p>
+    <ul>
+      <li><strong>Last called</strong>: {{hb_hook.last_called | date("Y-m-d H:i") }}</li>
+      <li><strong>URL used</strong>: {{hb_hook.url_called}}</li>
+      <li><strong>Executed on server</strong>: {{hb_hook.executed_by | default('unknown')}}</li>
+    </ul>
+  </div>
+{% endfor %}
