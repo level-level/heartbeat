@@ -2,6 +2,7 @@
     "name": "level-level/heartbeat",
     "description": "Registers events and triggers remotes if indicated",
     "type": "library",
+    "abandoned": true,
     "authors": [
         {
             "name": "Level Level",
